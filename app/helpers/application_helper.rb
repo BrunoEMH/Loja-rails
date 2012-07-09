@@ -1,12 +1,12 @@
 module ApplicationHelper
 
-  IGNORED_COLUMNS = [ 'id', 'updated_at', 'created_at']
+  IGNORED_COLUMNS = [ 'id', 'updated_at', 'created_at' ]
 
   def render_head(clazz, * columns)
 
-  	if columns.blank?
-  		columns = clazz.column_name - IGNORED_COLUMNS
-  	end
+    if columns.blank?
+      columns = clazz.column_names - IGNORED_COLUMNS
+    end
 
     content_tag :thead do
       content_tag :tr do
@@ -23,4 +23,3 @@ module ApplicationHelper
   end
 
 end
-

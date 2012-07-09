@@ -1,10 +1,10 @@
 <h2>
-	Novo Produto
+  Novo <%=  @produto.class.model_name %>
 </h2>
 
-  <%= form_for @produto do |f| %>
+<%= form_for @produto do |f| %>
 
-   <% unless @produto.errors.blank? %>
+    <% unless @produto.errors.blank? %>
         <ul>
           <% @produto.errors.full_messages.each do |erro| %>
             <li> <%= erro %></li>
@@ -12,22 +12,22 @@
         </ul>
     <% end %>
 
-  	<p>
-  		Nome: <%= f.text_field :nome %>
-  	</p>
+    <p>
+      Nome: <%= f.text_field :nome %>
+    </p>
 
-  	<p>
-  		Preço: <%= f.text_field :preco %>
-  	</p>
+    <p>
+      Preço: <%= f.text_field :preco %>
+    </p>
 
-  	<p>
-  		Descrição: 
-  		<br/>
-  		<%= f.text_area :descricao %>
-  	</p>
+    <p>
+      Descrição:
+      <br/>
+      <%= f.text_area :descricao %>
+    </p>
 
-  	<p>
-  		<%= f.submit 'Enviar' %>
-  	</p>
+    <p>
+      <%= f.submit 'Enviar' %>
+    </p>
 
 <% end %>

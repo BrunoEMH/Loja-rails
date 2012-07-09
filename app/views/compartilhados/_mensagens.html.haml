@@ -1,5 +1,5 @@
 - [:error, :success, :info].each do |key|
-  -unless flash[key].blank?
+  - unless flash[key].blank?
     %div{ :class => "alert alert-#{key}" }
       %a.close{'data-dismiss' => 'alert', 'href' => '#'}
         x

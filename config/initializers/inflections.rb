@@ -5,8 +5,9 @@
 ActiveSupport::Inflector.inflections do |inflect|
 #   inflect.plural /^(ox)$/i, '\1en'
 #   inflect.singular /^(ox)en/i, '\1'
-inflect.irregular 'item', 'itens'
+#   inflect.irregular 'person', 'people'
 #   inflect.uncountable %w( fish sheep )
+  inflect.irregular 'item', 'itens'
 end
 #
 # These inflection rules are supported but not enabled by default:

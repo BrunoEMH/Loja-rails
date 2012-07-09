@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120628001249) do
+ActiveRecord::Schema.define(:version => 20120628001218) do
 
   create_table "itens", :force => true do |t|
     t.integer  "pedido_id",  :null => false
