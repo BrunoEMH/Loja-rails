@@ -1,0 +1,25 @@
+<h2> Administração de Produtos </h2>
+
+<%= will_paginate @produto %>
+
+<div class ="well">
+   <%= link_to 'Novo Produto', new_admin_produto_path, :class => 'btn btn-primary' %>
+</div>
+<table class = "table table-bordered table">
+  <%= render_head Produto,
+      :nome,
+      :preço %>
+  
+  <tbody>
+  	<% @produtos.each do |produto| %>
+  	  <tr>
+  	  	<td><%= produto.nome %> </td>
+  	  	<td>
+  	  		<%= number_to_currency produto.preco %>
+  	  	</td>
+  	  </tr>
+  	  <%end%>
+  </tbody>
+</table>
+<%= will_paginate @produto %>  
+  
