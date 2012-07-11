@@ -17,6 +17,9 @@
   	  	<td>
   	  		<%= number_to_currency produto.preco %>
   	  	</td>
+        <td>
+          <%= link_to 'Editar', edit_admin_produto_path(produto), :class => 'btn btn-primary' %>
+        </td>
   	  </tr>
   	  <%end%>
   </tbody>
