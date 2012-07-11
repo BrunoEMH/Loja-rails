@@ -7,7 +7,7 @@ class Admin::ProdutosController <Admin::BaseController
   end
 
   def new 
-  	reder :new
+  	render :new
   end
 
   alias :edit :new
@@ -36,10 +36,10 @@ class Admin::ProdutosController <Admin::BaseController
   protected
 
   def carregar_produto
-    @produto = if params params[:id].blank?
+    @produto = if params[:id].blank?
       Produto.new
     else
-      @produto.find(params[:id])
+      Produto.find(params[:id])
     end
    end
 
