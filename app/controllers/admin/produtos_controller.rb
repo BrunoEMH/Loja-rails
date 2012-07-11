@@ -1,6 +1,6 @@
 class Admin::ProdutosController <Admin::BaseController
 
-  before_filter :carregar_produto, :only => [:new, :edit, :create, :update]
+  before_filter :carregar_produto, :only => [:new, :edit, :create, :update, :destroy]
 
   def index
   	@produtos = paginar( Produto )
@@ -26,6 +26,12 @@ class Admin::ProdutosController <Admin::BaseController
   end
 
   alias :update :create
+
+  def destroy
+    @produto.destroy
+    flash[:success] = 'O produto foi removido com sucesso'
+    redirect_to admin_produtos_path
+  end
   
   protected
 
