@@ -10,6 +10,7 @@ Loja::Application.routes.draw do
 
   namespace :admin do
     resources :produtos
+    resources :categorias
   end
 
   root :to => 'produtos#index'
