@@ -15,6 +15,14 @@ class BootstrapFormBuilder <
     wrap_content( property, super, options )
   end
 
+   def text_area( property, options = {} )
+    wrap_content( property, super, options )
+  end
+
+  def primary_submit( value )
+    submit( value, :class => 'btn btn-primary')
+  end
+
   def wrap_content( property, content, options = {} )
     label_name = self.object.class.human_attribute_name(property)
 
