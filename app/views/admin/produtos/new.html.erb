@@ -7,6 +7,7 @@
     <%= f.text_field :nome %>
     <%= f.text_field :preco %>
     <%= f.text_area :descricao, :rows => 3 %>
+    <%= f.select :categoria_id, Categoria.all.map { |c| [c.nome, c.id]}, :inclued_blank => 'selecione a categoria ' %>
     
 
     <div class  "form-actions">
